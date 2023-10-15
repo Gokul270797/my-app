@@ -5,6 +5,7 @@ import { Container, AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Step1 } from './Step1';
 import { Step2 } from './Step2';
 import { Step3 } from './Step3';
+import { Excel } from './Excel';
 
 const App = () => {
   const [userData, setUserData] = useState({ name: '', phone: '', email: '' });
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/step1" exact element={<Step1 setUserData={setUserData} userData={userData}/>} />
             <Route path="/step2" element={<Step2 addressData={addressData} setAddressData={setAddressData}/>} />
             <Route path="/step3" element={<Step3 userData={userData} addressData={addressData}/>} />
+            <Route path="/excel" exact element={<Excel />} />
           </Routes>
         </Container>
       </div>
